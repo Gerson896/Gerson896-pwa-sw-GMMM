@@ -1,5 +1,5 @@
 {
-    "version_datos": 1,
+    "version_datos": 2,
     "tareas": [
         {
             "titulo": "Inspeccionar el Service Worker"
@@ -9,6 +9,9 @@
         },
         {
             "titulo": "Probar el modo sin conexión"
+        },
+        {
+            "titulo": "Analizar stale-while-revalidate"
         }
     ]
 }
