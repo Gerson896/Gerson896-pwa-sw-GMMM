@@ -163,3 +163,21 @@ async function staleWhileRevalidate(req) {
 
     return cached || red;
 }
+
+self.addEventListener('push', event => {
+
+    const datos = event.data
+        ? event.data.text()
+        : 'Tienes una nueva notificación';
+
+    event.waitUntil(
+        self.registration.showNotification(
+            'Mis Tareas PWA',
+            {
+                body: datos,
+                icon: './icons/icon-192.png',
+                badge: './icons/icon-192.png'
+            }
+        )
+    );
+});
