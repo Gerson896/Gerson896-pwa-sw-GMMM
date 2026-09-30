@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#0b5394">
+
+    <meta name="theme-color" content="#111827">
 
     <title>Mis Tareas PWA</title>
 
@@ -13,22 +15,126 @@
 
 <body>
 
-    <header>
-        <h1>Mis Tareas PWA</h1>
-        <span id="estado-red"></span>
-    </header>
+    <div class="app">
 
-    <main>
-        <ul id="lista"></ul>
-        <p id="origen"></p>
-    </main>
+        <header class="header">
 
-    <div id="aviso" hidden>
-        Hay una nueva versión.
-        <button id="btn-actualizar">Actualizar</button>
+            <div class="brand">
+                <div class="brand-icon">✓</div>
+
+                <div>
+                    <p class="eyebrow">PWA · SERVICE WORKER</p>
+                    <h1>Mis Tareas</h1>
+                </div>
+            </div>
+
+            <div class="status">
+                <span class="status-dot"></span>
+                <span id="estado-red">En línea</span>
+            </div>
+
+        </header>
+
+
+        <main class="main">
+
+            <section class="hero">
+
+                <div>
+                    <p class="hero-label">TU ESPACIO DE PRODUCTIVIDAD</p>
+
+                    <h2>
+                        Organiza tus tareas.
+                        <span>Sin perder el ritmo.</span>
+                    </h2>
+
+                    <p class="hero-description">
+                        Una aplicación PWA preparada para funcionar
+                        incluso cuando no tienes conexión a Internet.
+                    </p>
+                </div>
+
+                <div class="hero-card">
+
+                    <div class="hero-card-icon">
+                        ⚡
+                    </div>
+
+                    <div>
+                        <strong>Modo offline</strong>
+                        <p>Tus datos están disponibles desde la caché.</p>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <section class="tasks-section">
+
+                <div class="section-header">
+
+                    <div>
+                        <p class="section-label">LISTA DE TAREAS</p>
+                        <h3>Mis pendientes</h3>
+                    </div>
+
+                    <div class="task-counter">
+                        <span>●</span>
+                        Actividades
+                    </div>
+
+                </div>
+
+                <ul id="lista"></ul>
+
+                <div class="data-version">
+                    <span class="version-icon">↻</span>
+                    <span id="origen">Cargando datos...</span>
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <footer class="footer">
+
+            <span>Mis Tareas PWA</span>
+
+            <span>
+                Service Worker · Offline Ready
+            </span>
+
+        </footer>
+
     </div>
+
+
+    <div id="aviso" class="update-notice" hidden>
+
+        <div class="update-content">
+
+            <div class="update-icon">
+                ↑
+            </div>
+
+            <div>
+                <strong>Nueva versión disponible</strong>
+                <p>Hay una actualización lista para instalar.</p>
+            </div>
+
+            <button id="btn-actualizar">
+                Actualizar
+            </button>
+
+        </div>
+
+    </div>
+
 
     <script src="app.js"></script>
 
 </body>
+
 </html>
